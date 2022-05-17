@@ -1,9 +1,10 @@
-package br.com.lucio.ordenacao;
+package br.com.lucio;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class DefaultMethos {
 
@@ -25,6 +26,15 @@ public class DefaultMethos {
 		
 		//Podendo adicionar um corpo ao método, mas não tem estado, o que é diferente 
 		//de classe abstrata
+		
+		
+		//Da mesma maneira que o forEach, é um default method.
+	
+		
+		Consumer<String> consumidor = new ConsumidorDeString();
+		palavras.forEach(consumidor);
+		
+		//Os default method não quebram a implementação da interface
 	}
 	
 
@@ -40,3 +50,10 @@ class ComparadorDeStringPorTamanho implements Comparator<String> {
         return 0;
     }
 }
+
+class ConsumidorDeString implements Consumer<String> {
+    public void accept(String s) {
+        System.out.println(s);
+    }
+}
+
