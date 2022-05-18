@@ -12,7 +12,7 @@ public class DefaultMethos {
 		
 		List<String> palavras = new ArrayList<>();
 		palavras.add("alura online");
-		palavras.add("casa do cÛdigo");
+		palavras.add("casa do c√≥digo");
 		palavras.add("caelum");
 		
 		
@@ -20,21 +20,21 @@ public class DefaultMethos {
 		System.out.println(palavras);
 		
 
-		//Com o java 8 foi lanÁado os default methods
+		//Com o java 8 foi lan√ßado os default methods
 		Comparator<String> comparador = new ComparadorDeStringPorTamanho();
 		Collections.sort(palavras, comparador); 
 		
-		//Podendo adicionar um corpo ao mÈtodo, mas n„o tem estado, o que È diferente 
+		//Podendo adicionar um corpo ao m√©todo, mas n√£o tem estado, o que √© diferente 
 		//de classe abstrata
 		
 		
-		//Da mesma maneira que o forEach, È um default method.
+		//Da mesma maneira que o forEach, √© um default method.
 	
 		
 		Consumer<String> consumidor = new ConsumidorDeString();
 		palavras.forEach(consumidor);
 		
-		//Os default method n„o quebram a implementaÁ„o da interface
+		//Os default method n√£o quebram a implementa√ß√£o  da interface
 	}
 	
 

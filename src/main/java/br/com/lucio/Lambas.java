@@ -14,13 +14,13 @@ public class Lambas {
 
 		List<String> palavras = new ArrayList<>();
 		palavras.add("alura online");
-		palavras.add("casa do código");
+		palavras.add("casa do cÃ³digo");
 		palavras.add("caelum");
 
 		Collections.sort(palavras);
 		System.out.println(palavras);
 
-		// Também podemos fazer com classes anônimas
+		// TambÃ©m podemos fazer com classes anonimas
 		Consumer<String> consumer = new Consumer<String>() {
 
 			@Override
@@ -40,7 +40,7 @@ public class Lambas {
 			}
 		});
 
-		// Agora com o Java 8, quando tem interface que tem APENAS 1 METODO IMPLEMENTADO (São chamadas de interfaces funcionais)
+		// Agora com o Java 8, quando tem interface que tem APENAS 1 METODO IMPLEMENTADO (SÃ£o chamadas de interfaces funcionais)
 		// Podemos utilizar os lambdas:
 		palavras.forEach((String t) -> {
 			System.out.println(t);
@@ -51,8 +51,8 @@ public class Lambas {
 			System.out.println(t);
 		});
 
-		// Reduzindo mais ainda: (Quando tem só um parametro, não precisa dos parenteses)
-		// Nao precisa também das chaves quado tem só uma linha
+		// Reduzindo mais ainda: (Quando tem sÃ³ um parametro, nÃ£o precisa dos parenteses)
+		// Nao precisa tambï¿½m das chaves quado tem sÃ³ uma linha
 		palavras.forEach(t -> System.out.println(t));
 
 		// Agora Fazendo o comparable
@@ -69,12 +69,12 @@ public class Lambas {
 			return Integer.compare(s1.length(), s2.length());
 		});
 
-		// Também não precisamos do Return
+		// Tambï¿½m nï¿½o precisamos do Return
 		palavras.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
 
 		palavras.forEach(t -> System.out.println(t));
 		
-		//E o consumer do forEach acima é a mesma coisa que isso:
+		//E o consumer do forEach acima ï¿½ a mesma coisa que isso:
 		Consumer<String> impressor = (String t) -> {
 			System.out.println(t);
 		};

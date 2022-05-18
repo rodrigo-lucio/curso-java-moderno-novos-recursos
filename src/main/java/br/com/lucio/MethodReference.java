@@ -17,7 +17,7 @@ public class MethodReference {
 		palavras.add("alura online");
 		palavras.add("curso bem longo com bastante caracteres");
 		palavras.add("a");
-		palavras.add("casa do cÛdigo");
+		palavras.add("casa do c√≥digo");
 		palavras.add("caelum");
 		palavras.add("abcd");
 
@@ -53,33 +53,32 @@ public class MethodReference {
 		
 		//Agora utilizando method references
 		palavras.sort(Comparator.comparing(s -> s.length()));
-		//… a mesma coisa
+		//√â a mesma coisa
 		palavras.sort(Comparator.comparing(String::length));
 		
 
 		//Esse caso
 		Function<String, Integer> funcao3 = s -> s.length();
 		
-		//… a mesma coisa que 
+		//√â a mesma coisa que  
 		Function<String, Integer> funcao4 = String::length;
 		//uma forma de escrever os lambdas mais enxutos
 		
 				
 		palavras.forEach(palavra -> System.out.println(palavra));
 		
-		//… a mesma coisa que
+		//√â a mesma coisa que
 		Consumer<String> consumer = palavra -> System.out.println(palavra);
 		palavras.forEach(consumer);
 		
-		//… a mesma coisa que
+		//√â a mesma coisa que
 		Consumer<String> consumer3 = System.out::println;
 		palavras.forEach(consumer3);
 		
-		//… a mesma coisa que
+		//√â a mesma coisa que
 		palavras.forEach(System.out::println);
 		
-		//Esses casos s„o apenas para interfaces que invoca apenas um metodo com um argumento
-		
+		//Esses casos s√£o apenas para interfaces que invoca apenas um metodo com um argumento
 		
 	}
 
