@@ -9,11 +9,11 @@ public class ExemploCursos {
 
 		List<Curso> cursos = new ArrayList<>();
 		
-		cursos.add(new Curso("Python", 445));
-		cursos.add(new Curso("Java", 512));
-		cursos.add(new Curso("JavaScript", 345));
-		cursos.add(new Curso("C#", 123));
-		cursos.add(new Curso("GO", 412));
+		cursos.add(new Curso("Python", 445l));
+		cursos.add(new Curso("Java", 512l));
+		cursos.add(new Curso("JavaScript", 345l));
+		cursos.add(new Curso("C#", 123l));
+		cursos.add(new Curso("GO", 412l));
 	
 		
 		cursos.sort(Comparator.comparing(Curso::getAlunos));
@@ -28,9 +28,9 @@ public class ExemploCursos {
 			.forEach(System.out::println);
 		
 		//Caso quizesse somar a quantidade de alunos de cursos com mais de 400 alunos
-		int sum = cursos.stream()
+		int sum = (int) cursos.stream()
 				.filter(c -> c.getAlunos() > 400)
-				.mapToInt(c -> c.getAlunos())
+				.mapToLong(c -> c.getAlunos())
 				.sum();
 		
 		System.out.println(sum);
